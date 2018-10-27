@@ -10,7 +10,7 @@ pytest = "*"
 python_version = "3.5"
 
 [packages]
-poetry = "*"
+poetry = ">=0.12.0"
 yapf = "*"
 "jinja2" = "*"
 "autopep8" = "*"

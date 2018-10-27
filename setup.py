@@ -57,7 +57,7 @@ setup(
     install_requires=[
         'jinja2',
         'yapf',
-        'poetry',
+        'poetry (>=0.12.0)',
         'autopep8',
     ],  # Optional
     # https://setuptools.readthedocs.io/en/latest/setuptools.html#dependencies-that-aren-t-in-pypi

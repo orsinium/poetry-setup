@@ -5,3 +5,4 @@ Pipfile.lock
 *.egg-info
 dist/
 build/
+.venv/
