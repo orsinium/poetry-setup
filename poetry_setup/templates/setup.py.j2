@@ -96,7 +96,7 @@ setup(
         {{ extra|pprint}}: {% if dep %}[
             {% for sub in dep %}
             '{{sub.pretty_name}}{{sub.constraint}}',
-            {%endfor %}
+            {% endfor %}
         ]{% else %}[]{% endif %},
         {% endfor %}
     {{ '},' }}
