@@ -91,7 +91,15 @@ setup(
     ],  # Optional
 
     {% if package.extras %}
-        extras_require={{ package.extras|pprint }},
+    extras_require={
+        {% for extra, dep in package.extras.items() %}
+        {{ extra|pprint}}: {% if dep %}[
+            {% for sub in dep %}
+            '{{sub.pretty_name}}{{sub.constraint}}',
+            {%endfor %}
+        ]{% else %}[]{% endif %},
+        {% endfor %}
+    {{ '},' }}
     {% endif %}
 
     # https://stackoverflow.com/a/16576850
